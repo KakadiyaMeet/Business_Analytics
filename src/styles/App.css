@@ -1,0 +1,32 @@
+/* ═══════════════════════════════════════════════ */
+/* App Layout                                      */
+/* ═══════════════════════════════════════════════ */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.main-content {
+  flex: 1;
+  padding: 28px 36px 40px;
+  margin-top: 56px;
+  overflow-y: auto;
+  animation: fadeIn 0.3s var(--ease);
+}
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg-primary);
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 16px 32px;
+  }
+}

@@ -1,0 +1,175 @@
+/* ===== User Management ===== */
+
+.um-page { animation: fadeIn 0.3s var(--ease); }
+
+.um-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.um-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.um-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.um-success {
+  background: var(--emerald-dim);
+  color: var(--emerald-light);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  animation: fadeIn 0.2s var(--ease);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.um-username {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.um-status {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.um-status.active {
+  background: var(--emerald-dim);
+  color: var(--emerald-light);
+}
+
+.um-status.inactive {
+  background: var(--rose-dim);
+  color: var(--rose);
+}
+
+.um-role {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.um-role.admin {
+  background: var(--violet-dim);
+  color: var(--violet);
+}
+
+.um-role.user {
+  background: var(--blue-dim);
+  color: var(--blue);
+}
+
+/* Action Buttons */
+.um-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.um-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  color: var(--text-muted);
+}
+
+.um-action-btn:hover {
+  border-color: var(--border-hover);
+  transform: scale(1.08);
+}
+
+.um-action-btn.view:hover {
+  color: var(--indigo);
+  background: var(--indigo-dim);
+  border-color: var(--indigo);
+}
+
+.um-action-btn.activate:hover {
+  color: var(--emerald);
+  background: var(--emerald-dim);
+  border-color: var(--emerald);
+}
+
+.um-action-btn.deactivate:hover {
+  color: var(--amber);
+  background: var(--amber-dim);
+  border-color: var(--amber);
+}
+
+.um-action-btn.delete:hover {
+  color: var(--rose);
+  background: var(--rose-dim);
+  border-color: var(--rose);
+}
+
+.um-action-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Edit Modal Form */
+.um-edit-modal {
+  text-align: left !important;
+  max-width: 460px !important;
+}
+
+.um-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.um-edit-form label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.um-edit-form input {
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--duration) var(--ease);
+}
+
+.um-edit-form input:focus {
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 3px var(--indigo-dim);
+}

@@ -1,0 +1,217 @@
+/* ===== Admin Navbar — Premium Style ===== */
+
+.admin-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(12, 12, 20, 0.98) 0%, rgba(8, 8, 14, 0.95) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.03),
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(139, 92, 246, 0.04);
+}
+
+.admin-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.admin-navbar-logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(139, 92, 246, 0.06));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.12);
+  transition: all 0.3s ease;
+}
+
+.admin-navbar-logo:hover {
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.2);
+  transform: scale(1.05);
+}
+
+.admin-navbar-brand {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  background: linear-gradient(135deg, #f0f0f5, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.08));
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+/* Center: Nav Tabs */
+.admin-navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  overflow-x: auto;
+  max-width: 680px;
+}
+
+.admin-navbar-center::-webkit-scrollbar {
+  display: none;
+}
+
+.admin-nav-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.admin-nav-tab svg {
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity 0.25s ease;
+}
+
+.admin-nav-tab:hover {
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.admin-nav-tab:hover svg {
+  opacity: 0.8;
+}
+
+.admin-nav-tab.active {
+  color: #c4b5fd;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.06));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 16px rgba(139, 92, 246, 0.08);
+}
+
+.admin-nav-tab.active svg {
+  opacity: 1;
+  color: #a78bfa;
+}
+
+/* Right: Profile */
+.admin-navbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.admin-avatar {
+  background: linear-gradient(135deg, #8b5cf6, #a78bfa) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+.admin-avatar:hover {
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2) !important;
+}
+
+.admin-dropdown {
+  border-color: rgba(139, 92, 246, 0.12) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.05) !important;
+}
+
+.admin-dropdown::before {
+  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent) !important;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .admin-navbar-center {
+    max-width: 480px;
+  }
+  .admin-nav-tab span {
+    display: none;
+  }
+  .admin-nav-tab {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-navbar {
+    padding: 0 12px;
+  }
+  .admin-navbar-center {
+    display: none;
+  }
+  .admin-badge {
+    display: none;
+  }
+}
+
+/* ===== Light Mode ===== */
+[data-theme="light"] .admin-navbar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  border-bottom-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .admin-navbar-center {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .admin-nav-tab {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] .admin-nav-tab:hover {
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .admin-nav-tab.active {
+  color: #7c3aed;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.05));
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="light"] .admin-badge {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.05));
+  color: #7c3aed;
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="light"] .admin-navbar-brand {
+  background: linear-gradient(135deg, #1e293b, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

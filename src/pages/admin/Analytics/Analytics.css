@@ -1,0 +1,134 @@
+/* ===== Analytics ===== */
+.an-page { animation: fadeIn 0.3s var(--ease); }
+
+.an-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.an-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.an-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.an-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.an-chart-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: all 0.3s var(--ease);
+}
+
+.an-chart-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-elevated);
+}
+
+.an-chart-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.an-chart-body {
+  height: 280px;
+  position: relative;
+}
+
+.an-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Active Users List */
+.an-users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.an-user-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.an-user-rank {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--indigo-dim);
+  color: var(--indigo-light);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.an-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+}
+
+.an-user-bar-wrap {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.an-user-bar {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--indigo), var(--violet));
+  transition: width 0.6s var(--ease);
+}
+
+.an-user-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .an-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Light mode chart text */
+[data-theme="light"] .an-chart-body canvas {
+  filter: none;
+}

@@ -1,0 +1,84 @@
+/* ===== Activity Log ===== */
+.al-page { animation: fadeIn 0.3s var(--ease); }
+
+.al-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.al-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.al-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.al-user {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.al-action-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.al-action-badge.login {
+  background: var(--emerald-dim);
+  color: var(--emerald-light);
+}
+
+.al-action-badge.logout {
+  background: var(--blue-dim);
+  color: var(--blue);
+}
+
+.al-action-badge.upload {
+  background: var(--indigo-dim);
+  color: var(--indigo-light);
+}
+
+.al-action-badge.delete_dataset {
+  background: var(--rose-dim);
+  color: var(--rose);
+}
+
+.al-action-badge.prediction {
+  background: var(--amber-dim);
+  color: var(--amber-light);
+}
+
+.al-action-badge.report_generated,
+.al-action-badge.report_downloaded {
+  background: var(--violet-dim);
+  color: var(--violet);
+}
+
+.al-action-badge.account_created {
+  background: var(--cyan-dim);
+  color: var(--cyan);
+}
+
+.al-details {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Consolas', monospace;
+}
+
+.al-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
