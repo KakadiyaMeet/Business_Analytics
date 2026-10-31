@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class EdaConfig(AppConfig):
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'eda'
+    verbose_name = 'Exploratory Data Analysis'
